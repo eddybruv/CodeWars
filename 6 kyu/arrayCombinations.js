@@ -17,7 +17,7 @@ function solve(arrays) {
   const uniqueArr = arrays.map((item) => {
     return Array.from(new Set(item));
   });
-    return uniqueArr.reduce((acc, b) => acc * b.length, 1);
+  return uniqueArr.reduce((acc, b) => acc * b.length, 1);
 }
 
 console.log(solve([[1, 2], [4], [5, 6]]), 4);
@@ -28,4 +28,20 @@ console.log(
     [5, 6, 6],
   ]),
   4
+);
+console.log(
+  solve([
+    [1, 2, 3],
+    [3, 4, 6, 6, 7],
+    [8, 9, 10, 12, 5, 6],
+  ]),
+  72
+);
+console.log(
+  solve([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+  ]),
+  8
 );
